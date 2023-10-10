@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoon Bhari Mang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> Khooni Darinde Log </h1>
+        <form id="searchForm">
+            <div class="dropdowns">
+                <select id="countrySelect">
+                    <option value="India">Select</option>
+                    <!-- You can add more countries here -->
+                    <option value="India">INDIA</option>
+                </select>
+                <select id="citySelect" disabled>
+                    <!-- Cities will be populated based on the selected country -->
+                </select>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <section class="hospitals hidden">
+        <h2>Hospitals</h2>
+        <ul id="hospitalList">
+            <!-- Hospital names will be populated here -->
+        </ul>
+    </section>
+
+    <section class="blood-groups hidden">
+        <h2>Blood Groups Availability</h2>
+        <ul id="bloodList">
+            <!-- Blood group counts will be populated here -->
+        </ul>
+    </section>
+
+    <section class="message">
+        <p class="beautiful-message">
+            Discover the power of humanity. One drop at a time, one life at a time.
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.dropdowns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hospitals {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hospitals h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hospital-list-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.hospital-list-item:hover {
+    background-color: #e0e0e0;
+}
+
+.blood-groups {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: beige;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.blood-groups h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.blood-groups ul {
+    list-style: none;
+    padding: 0;
+}
+.blood-groups li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.blood-group {
+    font-weight: bold;
+    flex: 1;
+}
+
+.count {
+    flex: 1;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    animation: counting 2s ease-in-out;
+}
+
+@keyframes counting {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.beautiful-message {
+    font-family: 'Playfair Display', serif; /* Choose an appropriate font */
+    font-size: 24px;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.hospitals.hidden,
+.blood-groups.hidden {
+    display: none;
+}
+
+/* Style for showing the section when not hidden */
+.blood-groups:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
